@@ -20,20 +20,20 @@ const openPhoto = (id, href) => {
   const title = photo.getAttribute('title');
   removeTargetClass();
   photo.classList.add(TARGET_CLASS);
-  document.title = title;
-  if (href) {
-    window.history.pushState({id: id}, '', href);
-  }
+  // document.title = title;
+  // if (href) {
+  //   window.history.pushState({id: id}, '', href);
+  // }
 }
 
 const closePhoto = (href) => {
   console.log(`Closing photo...`);
   const title = document.querySelector('head title').getAttribute('data-title');
   removeTargetClass();
-  document.title = title;
-  if (href) {
-    window.history.pushState({}, '', href);
-  }
+  // document.title = title;
+  // if (href) {
+  //   window.history.pushState({}, '', href);
+  // }
 }
 
 const removeTargetClass = () => {
